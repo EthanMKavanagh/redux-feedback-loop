@@ -12,7 +12,7 @@
     - [x] Input `data.sql` info into a database in Postico
 
 - [x] Set up Redux in index.js
-    - [x] Install dependencies: express, nodemon, react-redux, redux, redux-logger (optional)
+    - [x] Install dependencies: express, nodemon, react-redux, react-router-dom, redux, redux-logger (optional)
     - [x] Set up reducer(s)
 
 =============================

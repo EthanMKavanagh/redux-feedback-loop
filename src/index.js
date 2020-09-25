@@ -11,9 +11,14 @@ const feedbackForm = (state=[], action) => {
     return state;
 }
 
+const featuredFeedback = (state={}, action) => {
+    return state;
+}
+
 const reduxStore = createStore(
     combineReducers({
-        feedbackForm: feedbackForm
+        feedbackForm: feedbackForm,
+        featuredFeedback: featuredFeedback
     }),
     applyMiddleware(logger)
 )
