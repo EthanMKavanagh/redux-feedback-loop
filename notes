@@ -1,18 +1,19 @@
-TODO List:
-
+===========
+  Initial
+===========
 - [ ] Setup:
     - [x] Make components: Comments, Feeling, Review, Submission, Support, and Understanding
     - [x] `npm install`
         - `npm run server`
         - `npm run client`
 
-- [ ] Database:
-    - [ ] Create a database named 'prime_feedback'
-    - [ ] Input `data.sql` info into a database in Postico
+- [x] Database:
+    - [x] Create a database named 'prime_feedback'
+    - [x] Input `data.sql` info into a database in Postico
 
-- [ ] Set up Redux in index.js
-    - [ ] Install dependencies: express, nodemon, react-redux, redux, redux-logger (optional)
-    - [ ] Set up reducer(s)
+- [x] Set up Redux in index.js
+    - [x] Install dependencies: express, nodemon, react-redux, redux, redux-logger (optional)
+    - [x] Set up reducer(s)
 
 =============================
   Client Side - IN ORDER!!!
