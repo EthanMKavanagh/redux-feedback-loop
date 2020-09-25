@@ -1,0 +1,45 @@
+TODO List:
+
+- [ ] Setup:
+    - [x] Make components: Comments, Feeling, Review, Submission, Support, and Understanding
+    - [x] `npm install`
+        - `npm run server`
+        - `npm run client`
+
+- [ ] Database:
+    - [ ] Create a database named 'prime_feedback'
+    - [ ] Input `data.sql` info into a database in Postico
+
+- [ ] Set up Redux in index.js
+    - [ ] Set up reducer(s)
+
+===============
+  IN ORDER!!!
+===============
+- [ ] Feeling Page:
+    - [ ] Input with a number
+        - [ ] Not allowed to be blank
+    - [ ] 'Next' button that routes to 'Understanding'
+
+- [ ] Understanding Page:
+    - [ ] Input with a number
+        - [ ] Not allowed to be blank
+    - [ ] 'Next' button that routes to 'Support'
+
+- [ ] Support Page:
+    - [ ] Input with a number
+        - [ ] Not allowed to be blank
+    - [ ] 'Next' button that routes to 'Comments'
+
+- [ ] Comments Page:
+    - [ ] Input with text
+        - [ ] Allowed to be blank
+    - [ ] 'Next' button that routes to 'Review'
+
+- [ ] Review Page:
+    - [ ] Display the results from Feeling, Understanding, Support, and Comments
+    - [ ] 'Submit' button that routes to 'Submission'
+
+- [ ] Submission Page:
+    - [ ] Display a message acknowledging that the survey has been completed successfully
+    - [ ] 'Leave New Feedback' button that routes to 'Feeling' (restart survey)
