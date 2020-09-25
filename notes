@@ -11,11 +11,12 @@ TODO List:
     - [ ] Input `data.sql` info into a database in Postico
 
 - [ ] Set up Redux in index.js
+    - [ ] Install dependencies: express, nodemon, react-redux, redux, redux-logger (optional)
     - [ ] Set up reducer(s)
 
-===============
-  IN ORDER!!!
-===============
+=============================
+  Client Side - IN ORDER!!!
+=============================
 - [ ] Feeling Page:
     - [ ] Input with a number
         - [ ] Not allowed to be blank
@@ -43,3 +44,10 @@ TODO List:
 - [ ] Submission Page:
     - [ ] Display a message acknowledging that the survey has been completed successfully
     - [ ] 'Leave New Feedback' button that routes to 'Feeling' (restart survey)
+
+===============
+  Server Side
+===============
+- [ ] app.use for routing
+- [ ] GET
+- [ ] POST
