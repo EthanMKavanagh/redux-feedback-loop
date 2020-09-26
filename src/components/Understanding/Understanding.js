@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom';
 class Understanding extends Component {
 
     onNext = () => {
+        console.log('Leaving understanding page');
         this.props.history.push('/support');
     }
 

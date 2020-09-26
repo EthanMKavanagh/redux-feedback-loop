@@ -3,10 +3,19 @@ import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 
 class Submission extends Component {
+
+    onSubmitSurvey = () => {
+        console.log('Submitting survey');
+        alert('Survey Submitted Successfully');
+        this.props.postFeedback();
+        this.props.history.push('/');
+    }
+
     render() {
         return (
             <div>
-
+                <h1>Thank You!</h1>
+                <button onClick={this.onSubmitSurvey}>Leave New Feedback</button>
             </div>
         );
     }

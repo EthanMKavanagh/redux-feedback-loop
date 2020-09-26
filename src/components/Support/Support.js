@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom';
 class Support extends Component {
 
     onNext = () => {
+        console.log('Leaving support page');
         this.props.history.push('/comments');
     }
 

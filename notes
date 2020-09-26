@@ -45,14 +45,14 @@
     - [x] 'Next' button that routes to 'Review'
     - [x] Dispatch to reducer
 
-- [ ] Review Page:
-    - [ ] Display the results from Feeling, Understanding, Support, and Comments
-    - [ ] 'Submit' button that routes to 'Submission'
-    - [ ] Connect to feedbackResults
+- [x] Review Page:
+    - [x] Display the results from Feeling, Understanding, Support, and Comments
+    - [x] 'Submit' button that routes to 'Submission'
+    - [x] Connect to feedbackResults
 
-- [ ] Submission Page:
-    - [ ] Display a message acknowledging that the survey has been completed successfully
-    - [ ] 'Leave New Feedback' button that routes to 'Feeling' (restart survey)
+- [x] Submission Page:
+    - [x] Display a message acknowledging that the survey has been completed successfully
+    - [x] 'Leave New Feedback' button that routes to 'Feeling' (restart survey)
 
 ===============
   Server Side

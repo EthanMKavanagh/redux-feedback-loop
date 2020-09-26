@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom';
 class Feeling extends Component {
 
     onNext = () => {
+        console.log('Leaving feelings page');
         this.props.history.push('/understanding');
     }
 

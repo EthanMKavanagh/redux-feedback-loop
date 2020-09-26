@@ -5,6 +5,7 @@ import {withRouter} from 'react-router-dom';
 class Comments extends Component {
 
     onNext = () => {
+        console.log('Leaving comments page');
         this.props.history.push('/review');
     }
 

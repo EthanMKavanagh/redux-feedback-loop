@@ -5,7 +5,8 @@ import {withRouter} from 'react-router-dom';
 class Review extends Component {
 
     onNext = () => {
-        this.props.history.push('/support');
+        console.log('Leaving review page');
+        this.props.history.push('/submission');
     }
 
     render() {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {Route, HashRouter as Router} from 'react-router-dom';
+import {connect} from 'react-redux';
 import Comments from '../Comments/Comments';
 import Feeling from '../Feeling/Feeling';
 import Review from '../Review/Review';
@@ -11,26 +12,11 @@ import './App.css';
 
 class App extends Component {
 
-  // componentDidMount = () => {
-  //   this.getFeedback();
-  // }
-
-  // getFeedback = () => {
-  //   axios({
-  //     method: 'GET',
-  //     url: '/feedback'
-  //   }).then(response => {
-  //     console.log('/feedback GET response is:', response);
-  //   }).catch(err => {
-  //     console.error('/feedback GET error is:', err);
-  //   });
-  // }
-
   postFeedback = () => {
     axios({
       method: 'POST',
       url: '/feedback',
-      data: this.props.feedback
+      data: this.props.feedbackResults
     }).then(response => {
       console.log('/feedback POST response is:', response);
     }).catch(err => {
@@ -69,7 +55,9 @@ class App extends Component {
           </Route>
 
           <Route path='/submission' exact>
-            <Submission />
+            <Submission
+              postFeedback={this.postFeedback}
+            />
           </Route>
 
         </div>
@@ -77,5 +65,7 @@ class App extends Component {
     );
   }
 }
-
-export default App;
+const mapStateToProps = (reduxState) => ({
+  feedbackResults: reduxState.feedbackResults
+});
+export default connect(mapStateToProps)(App);
