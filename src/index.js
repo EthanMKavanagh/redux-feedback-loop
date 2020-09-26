@@ -38,6 +38,14 @@ const feedbackCategory = (state = initialFeedback, action) => {
         }
     }
 
+    // setting support feedback
+    if (action.type === 'SET_SUPPORT') {
+        return {
+            ...state,
+            support: action.payload
+        }
+    }
+
     // returning state by default
     return state;
 } // end feedbackCategory
