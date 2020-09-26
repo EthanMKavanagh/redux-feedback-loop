@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 class Submission extends Component {
     render() {
@@ -11,4 +12,4 @@ class Submission extends Component {
     }
 }
 
-export default connect()(Submission);
+export default connect()(withRouter(Submission));

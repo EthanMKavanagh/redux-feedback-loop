@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 class Support extends Component {
 
@@ -29,4 +30,4 @@ class Support extends Component {
     }
 }
 
-export default connect()(Support);
+export default connect()(withRouter(Support));

@@ -46,6 +46,14 @@ const feedbackCategory = (state = initialFeedback, action) => {
         }
     }
 
+    // setting comments feedback
+    if (action.type === 'SET_COMMENTS') {
+        return {
+            ...state,
+            support: action.payload
+        }
+    }
+
     // returning state by default
     return state;
 } // end feedbackCategory

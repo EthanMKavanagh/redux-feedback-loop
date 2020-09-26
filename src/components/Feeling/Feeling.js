@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 class Feeling extends Component {
 
@@ -29,4 +30,4 @@ class Feeling extends Component {
     }
 }
 
-export default connect()(Feeling);
+export default connect()(withRouter(Feeling));

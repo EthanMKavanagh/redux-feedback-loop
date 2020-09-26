@@ -21,29 +21,29 @@
 - [x] App.js:
     - [x] axios POST route
 
-- [ ] Feeling Page:
+- [x] Feeling Page:
     - [x] Input with a number
         - [x] Not allowed to be blank
-    - [ ] 'Next' button that routes to 'Understanding'
+    - [x] 'Next' button that routes to 'Understanding'
     - [x] Dispatch to reducer
 
-- [ ] Understanding Page:
+- [x] Understanding Page:
     - [x] Input with a number
         - [x] Not allowed to be blank
-    - [ ] 'Next' button that routes to 'Support'
+    - [x] 'Next' button that routes to 'Support'
     - [x] Dispatch to reducer
 
-- [ ] Support Page:
-    - [ ] Input with a number
-        - [ ] Not allowed to be blank
-    - [ ] 'Next' button that routes to 'Comments'
-    - [ ] Dispatch to reducer
+- [x] Support Page:
+    - [x] Input with a number
+        - [x] Not allowed to be blank
+    - [x] 'Next' button that routes to 'Comments'
+    - [x] Dispatch to reducer
 
-- [ ] Comments Page:
-    - [ ] Input with text
-        - [ ] Allowed to be blank
-    - [ ] 'Next' button that routes to 'Review'
-    - [ ] Dispatch to reducer
+- [x] Comments Page:
+    - [x] Input with text
+        - [x] Allowed to be blank
+    - [x] 'Next' button that routes to 'Review'
+    - [x] Dispatch to reducer
 
 - [ ] Review Page:
     - [ ] Display the results from Feeling, Understanding, Support, and Comments

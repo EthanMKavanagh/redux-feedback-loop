@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
+import {withRouter} from 'react-router-dom';
 
 class Comments extends Component {
 
@@ -29,4 +30,4 @@ class Comments extends Component {
     }
 }
 
-export default connect()(Comments);
+export default connect()(withRouter(Comments));
