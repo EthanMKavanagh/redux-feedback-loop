@@ -11,18 +11,30 @@ import './App.css';
 
 class App extends Component {
 
-  componentDidMount = () => {
-    this.getFeedback();
-  }
+  // componentDidMount = () => {
+  //   this.getFeedback();
+  // }
 
-  getFeedback = () => {
+  // getFeedback = () => {
+  //   axios({
+  //     method: 'GET',
+  //     url: '/feedback'
+  //   }).then(response => {
+  //     console.log('/feedback GET response is:', response);
+  //   }).catch(err => {
+  //     console.error('/feedback GET error is:', err);
+  //   });
+  // }
+
+  postFeedback = () => {
     axios({
-      method: 'GET',
-      url: '/feedback'
+      method: 'POST',
+      url: '/feedback',
+      data: this.props.feedback
     }).then(response => {
-      console.log('/feedback GET response is:', response);
+      console.log('/feedback POST response is:', response);
     }).catch(err => {
-      console.error('/feedback GET error is:', err);
+      console.error('/feedback POST error is:', err);
     });
   }
 

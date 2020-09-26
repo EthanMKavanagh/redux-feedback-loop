@@ -7,22 +7,53 @@ import {createStore, combineReducers, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import logger from 'redux-logger';
 
-const feedbackForm = (state=[], action) => {
+// Initial feedback information
+const initialFeedback = {
+    feeling: '',
+    understanding: '',
+    support: '',
+    comments: ''
+}
+
+// Reducer of an array of all feedback
+const feedbackResults = (state=[], action) => {
     return state;
 }
 
-const featuredFeedback = (state={}, action) => {
-    return state;
-}
+// Reducer adding each type of feedback
+const feedbackCategory = (state = initialFeedback, action) => {
+    // setting feeling feedback
+    if (action.type === 'SET_FEELING') {
+        return {
+            ...state,
+            feeling: action.payload
+        }
+    }
 
+    // setting understanding feedback
+    if (action.type === 'SET_UNDERSTANDING') {
+        return {
+            ...state,
+            understanding: action.payload
+        }
+    }
+
+    // returning state by default
+    return state;
+} // end feedbackCategory
+
+// Redux Store
 const reduxStore = createStore(
     combineReducers({
-        feedbackForm: feedbackForm,
-        featuredFeedback: featuredFeedback
+        feedbackResults,
+        feedbackCategory
     }),
+    // adding logger
     applyMiddleware(logger)
 )
 
+// Implementing react-redux
 ReactDOM.render(<Provider store={reduxStore}><App /></Provider>,
     document.getElementById('root'));
+
 registerServiceWorker();

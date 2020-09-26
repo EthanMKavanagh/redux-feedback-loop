@@ -18,29 +18,37 @@
 =============================
   Client Side - IN ORDER!!!
 =============================
+- [x] App.js:
+    - [x] axios POST route
+
 - [ ] Feeling Page:
-    - [ ] Input with a number
-        - [ ] Not allowed to be blank
+    - [x] Input with a number
+        - [x] Not allowed to be blank
     - [ ] 'Next' button that routes to 'Understanding'
+    - [x] Dispatch to reducer
 
 - [ ] Understanding Page:
-    - [ ] Input with a number
-        - [ ] Not allowed to be blank
+    - [x] Input with a number
+        - [x] Not allowed to be blank
     - [ ] 'Next' button that routes to 'Support'
+    - [x] Dispatch to reducer
 
 - [ ] Support Page:
     - [ ] Input with a number
         - [ ] Not allowed to be blank
     - [ ] 'Next' button that routes to 'Comments'
+    - [ ] Dispatch to reducer
 
 - [ ] Comments Page:
     - [ ] Input with text
         - [ ] Allowed to be blank
     - [ ] 'Next' button that routes to 'Review'
+    - [ ] Dispatch to reducer
 
 - [ ] Review Page:
     - [ ] Display the results from Feeling, Understanding, Support, and Comments
     - [ ] 'Submit' button that routes to 'Submission'
+    - [ ] Connect to feedbackResults
 
 - [ ] Submission Page:
     - [ ] Display a message acknowledging that the survey has been completed successfully
@@ -50,5 +58,4 @@
   Server Side
 ===============
 - [ ] app.use for routing
-- [ ] GET
 - [ ] POST
