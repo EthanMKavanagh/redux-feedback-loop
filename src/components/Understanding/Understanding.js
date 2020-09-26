@@ -4,11 +4,13 @@ import {withRouter} from 'react-router-dom';
 
 class Understanding extends Component {
 
+    // Navigate to next page
     onNext = () => {
         console.log('Leaving understanding page');
         this.props.history.push('/support');
     }
 
+    // Add input information to reducer
     onChangeUnderstanding = (event) => {
         this.props.dispatch({
             type: 'SET_UNDERSTANDING',

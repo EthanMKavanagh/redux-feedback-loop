@@ -4,6 +4,7 @@ import {withRouter} from 'react-router-dom';
 
 class Submission extends Component {
 
+    // Navigating back to start of survey, and calling axiosPOST function
     onSubmitSurvey = () => {
         console.log('Submitting survey');
         alert('Survey Submitted Successfully');

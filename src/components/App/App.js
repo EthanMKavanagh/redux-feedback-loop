@@ -12,6 +12,7 @@ import './App.css';
 
 class App extends Component {
 
+  // POST route
   postFeedback = () => {
     axios({
       method: 'POST',
@@ -65,7 +66,9 @@ class App extends Component {
     );
   }
 }
+
+// Pushing the object of feedback into axios POST
 const mapStateToProps = (reduxState) => ({
-  feedbackResults: reduxState.feedbackResults
+  feedbackResults: reduxState.feedbackCategory
 });
 export default connect(mapStateToProps)(App);

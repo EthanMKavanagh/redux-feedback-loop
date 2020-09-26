@@ -4,11 +4,13 @@ import {withRouter} from 'react-router-dom';
 
 class Support extends Component {
 
+    // Navigate to next page
     onNext = () => {
         console.log('Leaving support page');
         this.props.history.push('/comments');
     }
 
+    // Add input information to reducer
     onChangeSupport = (event) => {
         this.props.dispatch({
             type: 'SET_SUPPORT',

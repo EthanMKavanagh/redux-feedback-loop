@@ -4,6 +4,7 @@ import {withRouter} from 'react-router-dom';
 
 class Review extends Component {
 
+    // Navigating to next page
     onNext = () => {
         console.log('Leaving review page');
         this.props.history.push('/submission');
@@ -23,6 +24,7 @@ class Review extends Component {
     }
 }
 
+// Pulling in all the results from survey
 const mapStateToProps = (reduxState) => ({
     feeling: reduxState.feedbackCategory.feeling,
     understanding: reduxState.feedbackCategory.understanding,

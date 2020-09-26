@@ -4,11 +4,13 @@ import {withRouter} from 'react-router-dom';
 
 class Feeling extends Component {
 
+    // Navigate to next page
     onNext = () => {
         console.log('Leaving feelings page');
         this.props.history.push('/understanding');
     }
 
+    // Add input information to reducer
     onChangeFeeling = (event) => {
         this.props.dispatch({
             type: 'SET_FEELING',

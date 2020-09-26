@@ -4,11 +4,13 @@ import {withRouter} from 'react-router-dom';
 
 class Comments extends Component {
 
+    // Navigate to next page
     onNext = () => {
         console.log('Leaving comments page');
         this.props.history.push('/review');
     }
 
+    // Add input information to reducer
     onChangeComments = (event) => {
         this.props.dispatch({
             type: 'SET_COMMENTS',

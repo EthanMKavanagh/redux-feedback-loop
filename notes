@@ -58,4 +58,4 @@
   Server Side
 ===============
 - [x] app.use for routing
-- [ ] POST
+- [x] POST

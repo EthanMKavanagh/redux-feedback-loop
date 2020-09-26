@@ -15,11 +15,6 @@ const initialFeedback = {
     comments: ''
 }
 
-// Reducer of an array of all feedback
-const feedbackResults = (state=[], action) => {
-    return state;
-}
-
 // Reducer adding each type of feedback
 const feedbackCategory = (state = initialFeedback, action) => {
     // setting feeling feedback
@@ -61,7 +56,6 @@ const feedbackCategory = (state = initialFeedback, action) => {
 // Redux Store
 const reduxStore = createStore(
     combineReducers({
-        feedbackResults,
         feedbackCategory
     }),
     // adding logger

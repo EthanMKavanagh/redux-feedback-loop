@@ -3,6 +3,7 @@ const router = express.Router();
 
 const pool = require('../modules/pool');
 
+// POST route
 router.post('/', (req, res) => {
     console.log('In server POST');
     let newFeedback = req.body;
