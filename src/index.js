@@ -50,7 +50,7 @@ const feedbackCategory = (state = initialFeedback, action) => {
     if (action.type === 'SET_COMMENTS') {
         return {
             ...state,
-            support: action.payload
+            comments: action.payload
         }
     }
 
