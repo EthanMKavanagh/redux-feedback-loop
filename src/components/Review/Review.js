@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import {Button} from '@material-ui/core';
 
 class Review extends Component {
 
@@ -18,7 +19,12 @@ class Review extends Component {
                 <p>Understanding: {this.props.understanding}</p>
                 <p>Support: {this.props.support}</p>
                 <p>Comments: {this.props.comments}</p>
-                <button onClick={this.onNext}>Submit</button>
+                <Button 
+                    variant='contained'
+                    color='secondary'
+                    onClick={this.onNext}>
+                    Submit
+                </Button>
             </div>
         );
     }

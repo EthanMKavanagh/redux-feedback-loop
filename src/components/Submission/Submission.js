@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import {Button} from '@material-ui/core';
 
 class Submission extends Component {
 
@@ -16,7 +17,12 @@ class Submission extends Component {
         return (
             <div>
                 <h1>Thank You!</h1>
-                <button onClick={this.onSubmitSurvey}>Leave New Feedback</button>
+                <Button 
+                    variant='contained'
+                    color='secondary'
+                    onClick={this.onSubmitSurvey}>
+                    Leave New Feedback
+                </Button>
             </div>
         );
     }

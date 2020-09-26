@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import {Button} from '@material-ui/core';
+import '../components.css';
 
 class Comments extends Component {
 
@@ -24,10 +26,16 @@ class Comments extends Component {
                 <h1>Any comments you want to leave?</h1>
                 <h5>Comments?</h5>
                 <input
+                    className='input'
                     type='text'
                     onChange={this.onChangeComments}
                 />
-                <button onClick={this.onNext}>Next</button>
+                <Button 
+                    variant='contained'
+                    color='secondary'
+                    onClick={this.onNext}>
+                    Next
+                </Button>
             </div>
         );
     }

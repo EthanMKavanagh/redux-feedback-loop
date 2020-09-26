@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
+import {Button} from '@material-ui/core';
+import '../components.css';
 
 class Feeling extends Component {
 
@@ -24,10 +26,16 @@ class Feeling extends Component {
                 <h1>How are you feeling today?</h1>
                 <h5>Feeling?</h5>
                 <input required
+                    className='input'
                     type='number'
                     onChange={this.onChangeFeeling}
                 />
-                <button onClick={this.onNext}>Next</button>
+                <Button 
+                    variant='contained'
+                    color='secondary'
+                    onClick={this.onNext}>
+                    Next
+                </Button>
             </div>
         );
     }

@@ -1,6 +1,9 @@
-===========
+=============
+  Base Mode
+=============
+-----------
   Initial
-===========
+-----------
 - [x] Setup:
     - [x] Make components: Comments, Feeling, Review, Submission, Support, and Understanding
     - [x] `npm install`
@@ -15,9 +18,9 @@
     - [x] Install dependencies: express, nodemon, react-redux, react-router-dom, redux, redux-logger (optional)
     - [x] Set up reducer(s)
 
-=============================
+-----------------------------
   Client Side - IN ORDER!!!
-=============================
+-----------------------------
 - [x] App.js:
     - [x] axios POST route
 
@@ -54,8 +57,17 @@
     - [x] Display a message acknowledging that the survey has been completed successfully
     - [x] 'Leave New Feedback' button that routes to 'Feeling' (restart survey)
 
-===============
+---------------
   Server Side
-===============
+---------------
 - [x] app.use for routing
 - [x] POST
+
+==================
+  Stretch Goals:
+==================
+----------------
+  Material-UI:
+----------------
+- [x] Add/Learn buttons
+- [ ] Add/Learn cards
