@@ -1,7 +1,7 @@
 ===========
   Initial
 ===========
-- [ ] Setup:
+- [x] Setup:
     - [x] Make components: Comments, Feeling, Review, Submission, Support, and Understanding
     - [x] `npm install`
         - `npm run server`
@@ -57,5 +57,5 @@
 ===============
   Server Side
 ===============
-- [ ] app.use for routing
+- [x] app.use for routing
 - [ ] POST
