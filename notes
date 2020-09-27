@@ -72,10 +72,31 @@
 - [x] Back button
     - [x] Continue to make the input required
 
----------------
-  Material-UI
----------------
-- [x] Add/Learn Buttons
-- [x] Add/Learn Paper
-- [x] Add/Learn Text Boxes and Inputs
-    - [ ] Verification styling on Inputs
+-----------
+  Styling
+-----------
+- [ ] Material-UI
+    - [x] Add/Learn Buttons
+    - [x] Add/Learn Paper
+    - [x] Add/Learn Text Boxes and Inputs
+        - [ ] Verification styling on Inputs
+- [x] CSS
+    - [x] Custom styles
+
+-----------------
+  Admin Section
+-----------------
+- [ ] Admin Section
+    - [ ] Route of /admin
+    - [ ] GET route on server and app.js
+    - [ ] Display database as a table
+    - [ ] Most recent feedback on top
+    - [ ] Allow user to delete feedback row
+        - [ ] Prompt user before confirming delete
+    - [ ] Add the ability to flag a feedback for further review
+
+--------------------
+  Deploy to Heroku
+--------------------
+- [ ] Add info to pool.js
+- [ ] Config Heroku
