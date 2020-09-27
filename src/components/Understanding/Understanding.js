@@ -36,7 +36,7 @@ class Understanding extends Component {
                             label="Understanding" 
                             variant="outlined"
                             type='number'
-                            placeholder='1-10'
+                            placeholder='1 -10'
                             onChange={this.onChangeUnderstanding}
                         />
                     </Grid>
