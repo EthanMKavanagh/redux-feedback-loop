@@ -9,11 +9,12 @@ import Submission from '../Submission/Submission';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
 import Header from '../Header/Header';
+import Admin from '../Admin/Admin';
 import './App.css';
 
 class App extends Component {
 
-  // POST route
+  // axios POST
   postFeedback = () => {
     axios({
       method: 'POST',
@@ -23,6 +24,22 @@ class App extends Component {
       console.log('/feedback POST response is:', response);
     }).catch(err => {
       console.error('/feedback POST error is:', err);
+    });
+  }
+
+  componentDidMount = () => {
+    this.getFeedback();
+  }
+
+  // axios GET
+  getFeedback = () => {
+    axios({
+      method: 'GET',
+      url: '/feedback'
+    }).then(response => {
+      console.log('/feedback GET response is:', response);
+    }).catch(err => {
+      console.error('/feedback GET error is:', err);
     });
   }
 
@@ -58,6 +75,9 @@ class App extends Component {
             />
           </Route>
 
+          <Route path='/admin' exact>
+            <Admin />
+          </Route>
         </div>
       </Router>
     );
