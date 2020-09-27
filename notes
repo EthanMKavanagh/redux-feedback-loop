@@ -66,9 +66,16 @@
 ==================
   Stretch Goals:
 ==================
-----------------
-  Material-UI:
-----------------
+-----------------
+  Update Scores
+-----------------
+- [x] Back button
+    - [x] Continue to make the input required
+
+---------------
+  Material-UI
+---------------
 - [x] Add/Learn Buttons
-- [ ] Add/Learn Paper
+- [x] Add/Learn Paper
 - [x] Add/Learn Text Boxes and Inputs
+    - [ ] Verification styling on Inputs

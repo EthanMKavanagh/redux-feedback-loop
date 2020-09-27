@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import {Button, Paper} from '@material-ui/core';
+import {Button, Paper, Grid} from '@material-ui/core';
 import '../components.css';
 
 class Review extends Component {
@@ -10,6 +10,11 @@ class Review extends Component {
     onNext = () => {
         console.log('Leaving review page');
         this.props.history.push('/submission');
+    }
+
+    onBack = () => {
+        console.log('Going back');
+        this.props.history.push('/comments');
     }
 
     render() {
@@ -21,12 +26,30 @@ class Review extends Component {
                     <p>Understanding: {this.props.understanding}</p>
                     <p>Support: {this.props.support}</p>
                     <p>Comments: {this.props.comments}</p>
-                    <Button 
-                        variant='contained'
-                        color='secondary'
-                        onClick={this.onNext}>
-                        Submit
-                    </Button>
+                    <Grid 
+                        container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                        spacing={3}
+                    >
+                        <Grid item>
+                            <Button
+                                variant='contained'
+                                color='secondary'
+                                onClick={this.onNext}>
+                                Submit
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <Button
+                                variant='contained'
+                                color='secondary'
+                                onClick={this.onBack}>
+                                Back
+                            </Button>
+                        </Grid>
+                    </Grid>
                 </div>
             </Paper>
         );

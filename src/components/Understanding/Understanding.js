@@ -21,6 +21,11 @@ class Understanding extends Component {
         }
     }
 
+    onBack = () => {
+        console.log('Going back');
+        this.props.history.push('/');
+    }
+
     // Add input information to reducer
     onChangeUnderstanding = (event) => {
         this.props.dispatch({
@@ -51,6 +56,8 @@ class Understanding extends Component {
                                 variant="outlined"
                                 type='number'
                                 placeholder='1 -10'
+                                min='0'
+                                max='10'
                                 onChange={this.onChangeUnderstanding}
                             />
                         </Grid>
@@ -60,6 +67,14 @@ class Understanding extends Component {
                                 color='secondary'
                                 onClick={this.onNext}>
                                 Next
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <Button
+                                variant='contained'
+                                color='secondary'
+                                onClick={this.onBack}>
+                                Back
                             </Button>
                         </Grid>
                     </Grid>

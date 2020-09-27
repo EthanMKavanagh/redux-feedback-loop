@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import {Button, TextField, Grid, Paper} from '@material-ui/core';
+// import TextField_Component from '../TextField/TextField';
 import '../components.css';
 
 class Feeling extends Component {
@@ -14,6 +15,12 @@ class Feeling extends Component {
     onNext = () => {
         if (this.state.feeling === '') {
             alert('Whoops, form isn\'t answered.');
+            //document.getElementsByTagName('TextField').setAttribute('error', 'helperText=\'Incorrect entry\'');
+            //TextField.setAttribute('error');
+            //TextField.setAttribute('helperText', 'Incorrect entry');
+            //document.getElementById('outlined-basic').setAttribute('helperText', 'Incorrect entry');
+            //document.getElementById('outlined-basic').setAttribute('error');
+            //document.getElementsByTagName("TextInput")[0].setAttribute('error');
             return;
         }
         else {
@@ -32,6 +39,8 @@ class Feeling extends Component {
             feeling: event.target.value
         });
     }
+
+
 
     render() {
         return (
@@ -52,8 +61,14 @@ class Feeling extends Component {
                                 variant="outlined"
                                 type='number'
                                 placeholder='1-10'
+                                min='0' 
+                                max='10'
                                 onChange={this.onChangeFeeling}
                             />
+                            {/* <TextField_Component
+                                input={this.state.feeling}
+                                onChangeFeeling={this.onChangeFeeling}
+                            /> */}
                         </Grid>
                         <Grid item>
                             <Button 

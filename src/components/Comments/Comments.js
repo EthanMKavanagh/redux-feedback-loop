@@ -12,6 +12,11 @@ class Comments extends Component {
         this.props.history.push('/review');
     }
 
+    onBack = () => {
+        console.log('Going back');
+        this.props.history.push('/support');
+    }
+
     // Add input information to reducer
     onChangeComments = (event) => {
         if (event.target.value === '') {
@@ -54,6 +59,14 @@ class Comments extends Component {
                                 color='secondary'
                                 onClick={this.onNext}>
                                 Next
+                            </Button>
+                        </Grid>
+                        <Grid item>
+                            <Button
+                                variant='contained'
+                                color='secondary'
+                                onClick={this.onBack}>
+                                Back
                             </Button>
                         </Grid>
                     </Grid>
