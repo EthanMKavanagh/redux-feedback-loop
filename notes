@@ -69,5 +69,6 @@
 ----------------
   Material-UI:
 ----------------
-- [x] Add/Learn buttons
-- [ ] Add/Learn cards
+- [x] Add/Learn Buttons
+- [ ] Add/Learn Paper
+- [x] Add/Learn Text Boxes and Inputs

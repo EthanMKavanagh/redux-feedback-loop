@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import {Button} from '@material-ui/core';
-import '../components.css';
+import {Button, TextField, Grid} from '@material-ui/core';
 
 class Understanding extends Component {
 
@@ -24,18 +23,32 @@ class Understanding extends Component {
         return (
             <div>
                 <h1>How well are you understanding the content?</h1>
-                <h5>Understanding?</h5>
-                <input required
-                    className='input'
-                    type='number'
-                    onChange={this.onChangeUnderstanding}
-                />
-                <Button 
-                    variant='contained'
-                    color='secondary'
-                    onClick={this.onNext}>
-                    Next
-                </Button>
+                <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    spacing={3}
+                >
+                    <Grid item>
+                        <TextField
+                            id="outlined-basic"
+                            label="Understanding" 
+                            variant="outlined"
+                            type='number'
+                            placeholder='1-10'
+                            onChange={this.onChangeUnderstanding}
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Button 
+                            variant='contained'
+                            color='secondary'
+                            onClick={this.onNext}>
+                            Next
+                        </Button>
+                    </Grid>
+                </Grid>
             </div>
         );
     }

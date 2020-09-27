@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import {Button} from '@material-ui/core';
-import '../components.css';
+import {Button, TextField, Grid} from '@material-ui/core';
 
 class Comments extends Component {
 
@@ -14,6 +13,11 @@ class Comments extends Component {
 
     // Add input information to reducer
     onChangeComments = (event) => {
+        if (event.target.value === '') {
+            this.setState({
+                isComplete: false
+            });
+        }
         this.props.dispatch({
             type: 'SET_COMMENTS',
             payload: event.target.value
@@ -24,18 +28,41 @@ class Comments extends Component {
         return (
             <div>
                 <h1>Any comments you want to leave?</h1>
-                <h5>Comments?</h5>
-                <input
-                    className='input'
-                    type='text'
-                    onChange={this.onChangeComments}
-                />
-                <Button 
-                    variant='contained'
-                    color='secondary'
-                    onClick={this.onNext}>
-                    Next
-                </Button>
+                <Grid
+                    container
+                    direction="row"
+                    justify="center"
+                    alignItems="center"
+                    spacing={3}
+                >
+                    <Grid item>
+                        <TextField
+                            id="outlined-multiline-static"
+                            label="Comments"
+                            multiline
+                            rows={3}
+                            variant="outlined"
+                            type='number'
+                            onChange={this.onChangeComments}
+                            // error
+                            // helperText="Incorrect entry."
+                            // {
+                            //     this.state.isComplete ?
+                            //         error
+                            //         helperText="Incorrect entry." :
+                                    
+                            // }
+                        />
+                    </Grid>
+                    <Grid item>
+                        <Button 
+                            variant='contained'
+                            color='secondary'
+                            onClick={this.onNext}>
+                            Next
+                        </Button>
+                    </Grid>
+                </Grid>
             </div>
         );
     }
