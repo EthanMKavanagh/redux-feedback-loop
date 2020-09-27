@@ -6,10 +6,19 @@ import '../components.css';
 
 class Support extends Component {
 
+    state = {
+        support: ''
+    }
+
     // Navigate to next page
     onNext = () => {
-        console.log('Leaving support page');
-        this.props.history.push('/comments');
+        if (this.state.support === '') {
+            alert('Whoops, form isn\'t answered.');
+        }
+        else {
+            console.log('Leaving support page');
+            this.props.history.push('/comments');
+        }
     }
 
     // Add input information to reducer
@@ -17,6 +26,9 @@ class Support extends Component {
         this.props.dispatch({
             type: 'SET_SUPPORT',
             payload: event.target.value
+        });
+        this.setState({
+            support: event.target.value
         });
     }
 

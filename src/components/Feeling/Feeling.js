@@ -6,10 +6,20 @@ import '../components.css';
 
 class Feeling extends Component {
 
+    state = {
+        feeling: ''
+    }
+
     // Navigate to next page
     onNext = () => {
-        console.log('Leaving feelings page');
-        this.props.history.push('/understanding');
+        if (this.state.feeling === '') {
+            alert('Whoops, form isn\'t answered.');
+            return;
+        }
+        else {
+            console.log('Leaving feelings page');
+            this.props.history.push('/understanding');
+        }
     }
 
     // Add input information to reducer
@@ -17,6 +27,9 @@ class Feeling extends Component {
         this.props.dispatch({
             type: 'SET_FEELING',
             payload: event.target.value
+        });
+        this.setState({
+            feeling: event.target.value
         });
     }
 

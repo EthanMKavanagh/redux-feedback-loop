@@ -6,10 +6,19 @@ import '../components.css';
 
 class Understanding extends Component {
 
+    state = {
+        understanding: ''
+    }
+
     // Navigate to next page
     onNext = () => {
-        console.log('Leaving understanding page');
-        this.props.history.push('/support');
+        if (this.state.understanding === '') {
+            alert('Whoops, form isn\'t answered.')
+        }
+        else {
+            console.log('Leaving understanding page');
+            this.props.history.push('/support');
+        }
     }
 
     // Add input information to reducer
@@ -17,6 +26,9 @@ class Understanding extends Component {
         this.props.dispatch({
             type: 'SET_UNDERSTANDING',
             payload: event.target.value
+        });
+        this.setState({
+            understanding: event.target.value
         });
     }
 
