@@ -8,6 +8,7 @@ import Review from '../Review/Review';
 import Submission from '../Submission/Submission';
 import Support from '../Support/Support';
 import Understanding from '../Understanding/Understanding';
+import Header from '../Header/Header';
 import './App.css';
 
 class App extends Component {
@@ -29,11 +30,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
-            <h1 className="App-title">Feedback!</h1>
-            <h4><i>Prime Academy</i></h4>
-          </header>
-          <br/>
+          <Header />
           
           <Route path='/' exact>
             <Feeling />
