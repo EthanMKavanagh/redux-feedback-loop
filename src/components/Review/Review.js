@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import {Button} from '@material-ui/core';
+import {Button, Paper} from '@material-ui/core';
+import '../components.css';
 
 class Review extends Component {
 
@@ -13,19 +14,21 @@ class Review extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Review Your Feedback</h1>
-                <p>Feeling: {this.props.feeling}</p>
-                <p>Understanding: {this.props.understanding}</p>
-                <p>Support: {this.props.support}</p>
-                <p>Comments: {this.props.comments}</p>
-                <Button 
-                    variant='contained'
-                    color='secondary'
-                    onClick={this.onNext}>
-                    Submit
-                </Button>
-            </div>
+            <Paper elevation={3} className='paper'>
+                <div className='paper-text'>
+                    <h1>Review Your Feedback</h1>
+                    <p>Feeling: {this.props.feeling}</p>
+                    <p>Understanding: {this.props.understanding}</p>
+                    <p>Support: {this.props.support}</p>
+                    <p>Comments: {this.props.comments}</p>
+                    <Button 
+                        variant='contained'
+                        color='secondary'
+                        onClick={this.onNext}>
+                        Submit
+                    </Button>
+                </div>
+            </Paper>
         );
     }
 }

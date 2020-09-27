@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
-import {Button, TextField, Grid} from '@material-ui/core';
+import {Button, TextField, Grid, Paper} from '@material-ui/core';
+import '../components.css';
 
 class Comments extends Component {
 
@@ -26,44 +27,38 @@ class Comments extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Any comments you want to leave?</h1>
-                <Grid
-                    container
-                    direction="row"
-                    justify="center"
-                    alignItems="center"
-                    spacing={3}
-                >
-                    <Grid item>
-                        <TextField
-                            id="outlined-multiline-static"
-                            label="Comments"
-                            multiline
-                            rows={3}
-                            variant="outlined"
-                            type='number'
-                            onChange={this.onChangeComments}
-                            // error
-                            // helperText="Incorrect entry."
-                            // {
-                            //     this.state.isComplete ?
-                            //         error
-                            //         helperText="Incorrect entry." :
-                                    
-                            // }
-                        />
+            <Paper elevation={3} className='paper'>
+                <div className='paper-text'>
+                    <h1>Any comments you want to leave?</h1>
+                    <Grid
+                        container
+                        direction="row"
+                        justify="center"
+                        alignItems="center"
+                        spacing={3}
+                    >
+                        <Grid item>
+                            <TextField
+                                id="outlined-multiline-static"
+                                label="Comments"
+                                multiline
+                                rows={3}
+                                variant="outlined"
+                                type='number'
+                                onChange={this.onChangeComments}
+                            />
+                        </Grid>
+                        <Grid item>
+                            <Button 
+                                variant='contained'
+                                color='secondary'
+                                onClick={this.onNext}>
+                                Next
+                            </Button>
+                        </Grid>
                     </Grid>
-                    <Grid item>
-                        <Button 
-                            variant='contained'
-                            color='secondary'
-                            onClick={this.onNext}>
-                            Next
-                        </Button>
-                    </Grid>
-                </Grid>
-            </div>
+                </div>
+            </Paper>
         );
     }
 }
