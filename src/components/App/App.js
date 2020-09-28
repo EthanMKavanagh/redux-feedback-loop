@@ -27,21 +27,25 @@ class App extends Component {
     });
   }
 
-  // componentDidMount = () => {
-  //   this.getFeedback();
-  // }
+  componentDidMount = () => {
+    this.getFeedback();
+  }
 
-  // axios GET
-  // getFeedback = () => {
-  //   axios({
-  //     method: 'GET',
-  //     url: '/feedback'
-  //   }).then(response => {
-  //     console.log('/feedback GET response is:', response);
-  //   }).catch(err => {
-  //     console.error('/feedback GET error is:', err);
-  //   });
-  // }
+  //axios GET
+  getFeedback = () => {
+    axios({
+      method: 'GET',
+      url: '/feedback'
+    }).then(response => {
+      console.log('/feedback GET response is:', response);
+      this.props.dispatch({
+        type: '',
+        payload: ''
+      });
+    }).catch(err => {
+      console.error('/feedback GET error is:', err);
+    });
+  }
 
   render() {
     return (
@@ -66,13 +70,13 @@ class App extends Component {
           </Route>
 
           <Route path='/review' exact>
-            <Review />
+            <Review 
+              postFeedback={this.postFeedback}
+            />
           </Route>
 
           <Route path='/submission' exact>
-            <Submission
-              postFeedback={this.postFeedback}
-            />
+            <Submission />
           </Route>
 
           <Route path='/admin' exact>

@@ -7,10 +7,7 @@ import '../components.css';
 class Submission extends Component {
 
     // Navigating back to start of survey, and calling axiosPOST function
-    onSubmitSurvey = () => {
-        console.log('Submitting survey');
-        alert('Survey Submitted Successfully');
-        this.props.postFeedback();
+    newSurvey = () => {
         this.props.history.push('/');
     }
 
@@ -22,7 +19,7 @@ class Submission extends Component {
                     <Button 
                         variant='contained'
                         color='secondary'
-                        onClick={this.onSubmitSurvey}>
+                        onClick={this.newSurvey}>
                         Leave New Feedback
                     </Button>
                 </div>

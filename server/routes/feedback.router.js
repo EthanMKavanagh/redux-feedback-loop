@@ -20,8 +20,15 @@ router.post('/', (req, res) => {
 });
 
 // GET route
-// router.get('/', (req, res) => {
-
-// })
+router.get('/', (req, res) => {
+    console.log('In server GET');
+    let queryString = `SELECT * FROM "prime_feedback" ORDER BY "id" DESC;`;
+    pool.query(queryString).then(results => {
+        res.send(results.rows);
+    }).catch(err => {
+        console.error('Error in server GET:', err);
+        res.sendStatus(500);
+    });
+});
 
 module.exports = router;

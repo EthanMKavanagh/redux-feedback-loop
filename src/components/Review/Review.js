@@ -9,6 +9,9 @@ class Review extends Component {
     // Navigating to next page
     onNext = () => {
         console.log('Leaving review page');
+        console.log('Submitting survey');
+        alert('Survey Submitted Successfully');
+        this.props.postFeedback();
         this.props.history.push('/submission');
     }
 
