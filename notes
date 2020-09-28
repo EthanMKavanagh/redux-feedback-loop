@@ -87,11 +87,12 @@
   Admin Section
 -----------------
 - [ ] Admin Section
-    - [ ] Route of /admin
-    - [ ] GET route on server and app.js
+    - [x] Route of /admin
+    - [x] GET route on server and app.js
     - [ ] Display database as a table
-    - [ ] Most recent feedback on top
-    - [ ] Allow user to delete feedback row
+    - [x] Most recent feedback on top
+    - [ ] DELETE route on server
+        - [ ] DELETE axios call
         - [ ] Prompt user before confirming delete
     - [ ] Add the ability to flag a feedback for further review
 

@@ -1,26 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import AdminItem from './AdminItem/AdminItem';
 
 class Admin extends Component {
     render() {
         return (
             <table>
-                <tr>
-                    <th>Feeling</th>
-                    <th>Comprehension</th>
-                    <th>Support</th>
-                    <th>Comments</th>
-                    <th>Flag</th>
-                    <th>Delete</th>
-                </tr>
-                <tr>
-
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Feeling</th>
+                        <th>Comprehension</th>
+                        <th>Support</th>
+                        <th>Comments</th>
+                        <th>Flag</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        this.props.feedback.map(item =>
+                            <AdminItem
+                                key={item.id}
+                                feeling={item.feeling}
+                                understanding={item.understanding}
+                                support={item.support}
+                                comments={item.comments}
+                            />
+                    )}
+                </tbody>
             </table>
         );
     }
 }
-const mapStateToProps = (reduxState) => ({
-    response: reduxState
-});
-export default connect(mapStateToProps)(Admin);
+export default connect()(Admin);

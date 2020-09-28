@@ -22,7 +22,7 @@ router.post('/', (req, res) => {
 // GET route
 router.get('/', (req, res) => {
     console.log('In server GET');
-    let queryString = `SELECT * FROM "prime_feedback" ORDER BY "id" DESC;`;
+    let queryString = `SELECT * FROM "feedback" ORDER BY "id" DESC;`;
     pool.query(queryString).then(results => {
         res.send(results.rows);
     }).catch(err => {

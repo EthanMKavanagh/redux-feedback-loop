@@ -14,6 +14,10 @@ import './App.css';
 
 class App extends Component {
 
+  state = {
+    feedback: []
+  }
+
   // axios POST
   postFeedback = () => {
     axios({
@@ -38,9 +42,8 @@ class App extends Component {
       url: '/feedback'
     }).then(response => {
       console.log('/feedback GET response is:', response);
-      this.props.dispatch({
-        type: '',
-        payload: ''
+      this.setState({
+        feedback: response.data
       });
     }).catch(err => {
       console.error('/feedback GET error is:', err);
@@ -80,7 +83,9 @@ class App extends Component {
           </Route>
 
           <Route path='/admin' exact>
-            <Admin />
+            <Admin
+              feedback={this.state.feedback}
+            />
           </Route>
         </div>
       </Router>
