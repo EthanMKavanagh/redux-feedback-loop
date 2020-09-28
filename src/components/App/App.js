@@ -27,21 +27,21 @@ class App extends Component {
     });
   }
 
-  componentDidMount = () => {
-    this.getFeedback();
-  }
+  // componentDidMount = () => {
+  //   this.getFeedback();
+  // }
 
   // axios GET
-  getFeedback = () => {
-    axios({
-      method: 'GET',
-      url: '/feedback'
-    }).then(response => {
-      console.log('/feedback GET response is:', response);
-    }).catch(err => {
-      console.error('/feedback GET error is:', err);
-    });
-  }
+  // getFeedback = () => {
+  //   axios({
+  //     method: 'GET',
+  //     url: '/feedback'
+  //   }).then(response => {
+  //     console.log('/feedback GET response is:', response);
+  //   }).catch(err => {
+  //     console.error('/feedback GET error is:', err);
+  //   });
+  // }
 
   render() {
     return (

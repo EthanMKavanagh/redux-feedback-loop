@@ -19,4 +19,9 @@ router.post('/', (req, res) => {
     });
 });
 
+// GET route
+// router.get('/', (req, res) => {
+
+// })
+
 module.exports = router;
