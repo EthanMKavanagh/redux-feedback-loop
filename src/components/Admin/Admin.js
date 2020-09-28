@@ -1,34 +1,44 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import AdminItem from './AdminItem/AdminItem';
+import {Button, Paper, TableContainer, Table, TableHead, TableRow, TableCell, TableBody} from '@material-ui/core';
 
 class Admin extends Component {
     render() {
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Feeling</th>
-                        <th>Comprehension</th>
-                        <th>Support</th>
-                        <th>Comments</th>
-                        <th>Flag</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {
-                        this.props.feedback.map(item =>
-                            <AdminItem
-                                key={item.id}
-                                feeling={item.feeling}
-                                understanding={item.understanding}
-                                support={item.support}
-                                comments={item.comments}
-                            />
-                    )}
-                </tbody>
-            </table>
+            <Paper elevation={3}>
+                <TableContainer>
+                    <Table aria-label="simple table">
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>Feeling</TableCell>
+                                <TableCell>Comprehension</TableCell>
+                                <TableCell>Support</TableCell>
+                                <TableCell>Comments</TableCell>
+                                <TableCell>Flag</TableCell>
+                                <TableCell>Delete</TableCell>
+                            </TableRow>
+                        </TableHead>
+                        <TableBody>
+                            {this.props.feedback.map(item =>
+                                <TableRow component='th' scope='row'>
+                                    <TableCell align='left'>{item.feeling}</TableCell>
+                                    <TableCell align='left'>{item.understanding}</TableCell>
+                                    <TableCell align='left'>{item.support}</TableCell>
+                                    <TableCell align='left'>{item.comments}</TableCell>
+                                    <TableCell align='left'>Flagged?</TableCell>
+                                    <TableCell align='left'>
+                                        <Button 
+                                            color='secondary' 
+                                            variant='contained'>
+                                            Delete
+                                        </Button>
+                                    </TableCell>
+                                </TableRow>
+                            )}
+                        </TableBody>
+                    </Table>
+                </TableContainer>
+            </Paper>
         );
     }
 }

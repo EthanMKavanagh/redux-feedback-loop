@@ -89,7 +89,7 @@
 - [ ] Admin Section
     - [x] Route of /admin
     - [x] GET route on server and app.js
-    - [ ] Display database as a table
+    - [x] Display database as a table
     - [x] Most recent feedback on top
     - [ ] DELETE route on server
         - [ ] DELETE axios call
