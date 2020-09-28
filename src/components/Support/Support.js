@@ -6,13 +6,9 @@ import '../components.css';
 
 class Support extends Component {
 
-    state = {
-        support: ''
-    }
-
     // Navigate to next page
     onNext = () => {
-        if (this.state.support === '') {
+        if (this.props.support === '') {
             alert('Whoops, form isn\'t answered.');
         }
         else {
@@ -31,9 +27,6 @@ class Support extends Component {
         this.props.dispatch({
             type: 'SET_SUPPORT',
             payload: event.target.value
-        });
-        this.setState({
-            support: event.target.value
         });
     }
 
@@ -83,5 +76,7 @@ class Support extends Component {
         );
     }
 }
-
-export default connect()(withRouter(Support));
+const mapStateToProps = (reduxState) => ({
+    support: reduxState.feedbackCategory.support
+});
+export default connect(mapStateToProps)(withRouter(Support));

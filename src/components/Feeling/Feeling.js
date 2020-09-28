@@ -6,13 +6,9 @@ import '../components.css';
 
 class Feeling extends Component {
 
-    state = {
-        feeling: ''
-    }
-
     // Navigate to next page
     onNext = () => {
-        if (this.state.feeling === '') {
+        if (this.props.feeling === '') {
             alert('Whoops, form isn\'t answered.');
             return;
         }
@@ -27,9 +23,6 @@ class Feeling extends Component {
         this.props.dispatch({
             type: 'SET_FEELING',
             payload: event.target.value
-        });
-        this.setState({
-            feeling: event.target.value
         });
     }
 
@@ -73,5 +66,7 @@ class Feeling extends Component {
         );
     }
 }
-
-export default connect()(withRouter(Feeling));
+const mapStateToProps = (reduxState) => ({
+    feeling: reduxState.feedbackCategory.feeling
+});
+export default connect(mapStateToProps)(withRouter(Feeling));

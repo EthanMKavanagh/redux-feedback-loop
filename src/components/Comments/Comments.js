@@ -19,11 +19,6 @@ class Comments extends Component {
 
     // Add input information to reducer
     onChangeComments = (event) => {
-        if (event.target.value === '') {
-            this.setState({
-                isComplete: false
-            });
-        }
         this.props.dispatch({
             type: 'SET_COMMENTS',
             payload: event.target.value

@@ -6,13 +6,9 @@ import '../components.css';
 
 class Understanding extends Component {
 
-    state = {
-        understanding: ''
-    }
-
     // Navigate to next page
     onNext = () => {
-        if (this.state.understanding === '') {
+        if (this.props.understanding === '') {
             alert('Whoops, form isn\'t answered.')
         }
         else {
@@ -31,9 +27,6 @@ class Understanding extends Component {
         this.props.dispatch({
             type: 'SET_UNDERSTANDING',
             payload: event.target.value
-        });
-        this.setState({
-            understanding: event.target.value
         });
     }
 
@@ -83,5 +76,7 @@ class Understanding extends Component {
         );
     }
 }
-
-export default connect()(withRouter(Understanding));
+const mapStateToProps = (reduxState) => ({
+    understanding: reduxState.feedbackCategory.understanding
+});
+export default connect(mapStateToProps)(withRouter(Understanding));
