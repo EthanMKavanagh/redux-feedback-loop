@@ -7,3 +7,11 @@
 .paper-text {
     padding: 105px;
 }
+
+.numberCell {
+    width: 135px;
+}
+
+.commentsCell {
+    padding-left: 30px;
+}
