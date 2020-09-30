@@ -15,8 +15,8 @@ class Admin extends Component {
                                 <TableCell align='center'>Comprehension</TableCell>
                                 <TableCell align='center'>Support</TableCell>
                                 <TableCell align='left'>Comments</TableCell>
-                                <TableCell align='center'>Flag</TableCell>
-                                <TableCell align='center'>Delete</TableCell>
+                                <TableCell align='center' className='buttonCell'>Flag</TableCell>
+                                <TableCell align='center' className='buttonCell'>Delete</TableCell>
                             </TableRow>
                         </TableHead>
                         <TableBody>
@@ -46,13 +46,16 @@ class Admin extends Component {
                                     </TableCell>
                                     <TableCell  
                                         align='center'>
-                                        {item.flagged}
+                                        <Button
+                                            color='primary'
+                                            onClick={() => this.props.onFlagged(item.id)}>
+                                            Flag
+                                        </Button>
                                     </TableCell>
                                     <TableCell 
                                         align='center'>
                                         <Button 
                                             color='secondary' 
-                                            variant='contained'
                                             onClick={() => this.props.onDelete(item.id)}>
                                             Delete
                                         </Button>

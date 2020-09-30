@@ -91,9 +91,9 @@
     - [x] GET route on server and app.js
     - [x] Display database as a table
     - [x] Most recent feedback on top
-    - [ ] DELETE route on server
-        - [ ] DELETE axios call
-        - [ ] Prompt user before confirming delete
+    - [x] DELETE route on server
+        - [x] DELETE axios call
+        - [x] Prompt user before confirming delete
     - [ ] Add the ability to flag a feedback for further review
 
 --------------------

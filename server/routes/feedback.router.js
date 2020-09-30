@@ -44,4 +44,15 @@ router.delete('/:id', (req, res) => {
     });
 });
 
+router.put('/:id', (req, res) => {
+    let queryString = `UPDATE "feedback" SET "flagged" = TRUE WHERE "id" = $1;`;
+    pool.query( queryString, [id]).then(results => {
+        console.log('Updated flagged to:', results);
+        res.sendStatus(200);
+    }).catch(err => {
+        console.log('Error in server PUT:', err);
+        res.sendStatus(500);
+    });
+});
+
 module.exports = router;

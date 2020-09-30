@@ -52,6 +52,7 @@ class App extends Component {
 
   // axios DELETE
   onDelete = (id) => {
+    alert('Deleting Feedback')
     axios({
       method: 'DELETE',
       url: `/feedback/${id}`
@@ -60,6 +61,21 @@ class App extends Component {
       this.getFeedback();
     }).catch(err => {
       console.error('DELETE error:', err);
+    });
+  }
+
+  onFlagged = (id) => {
+    axios({
+      method: 'PUT',
+      url: `/feedback/${id}`,
+      // data: {
+      //   flagged: FALSE
+      // }
+    }).then(response => {
+      console.log('PUT response:', response);
+      this.getFeedback();
+    }).catch(err => {
+      console.error('PUT error:', err);
     });
   }
 
@@ -99,6 +115,7 @@ class App extends Component {
             <Admin
               feedback={this.state.feedback}
               onDelete={this.onDelete}
+              onFlagged={this.onFlagged}
             />
           </Route>
         </div>
