@@ -35,7 +35,7 @@ class App extends Component {
     this.getFeedback();
   }
 
-  //axios GET
+  // axios GET
   getFeedback = () => {
     axios({
       method: 'GET',
@@ -47,6 +47,19 @@ class App extends Component {
       });
     }).catch(err => {
       console.error('/feedback GET error is:', err);
+    });
+  }
+
+  // axios DELETE
+  onDelete = (id) => {
+    axios({
+      method: 'DELETE',
+      url: `/feedback/${id}`
+    }).then(response => {
+      console.log('DELETE response:', response);
+      this.getFeedback();
+    }).catch(err => {
+      console.error('DELETE error:', err);
     });
   }
 
@@ -85,6 +98,7 @@ class App extends Component {
           <Route path='/admin' exact>
             <Admin
               feedback={this.state.feedback}
+              onDelete={this.onDelete}
             />
           </Route>
         </div>

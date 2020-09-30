@@ -6,7 +6,7 @@ import '../components.css';
 class Admin extends Component {
     render() {
         return (
-            <Paper elevation={3}>
+            <Paper elevation={3} className='paperTable'>
                 <TableContainer>
                     <Table aria-label="simple table">
                         <TableHead>
@@ -21,8 +21,10 @@ class Admin extends Component {
                         </TableHead>
                         <TableBody>
                             {this.props.feedback.map(item =>
-                                <TableRow component='th' scope='row'>
+                                <TableRow key={item.id}>
                                     <TableCell 
+                                        component='th' 
+                                        scope='row'
                                         align='center'
                                         className='numberCell'>
                                         {item.feeling}
@@ -44,13 +46,14 @@ class Admin extends Component {
                                     </TableCell>
                                     <TableCell  
                                         align='center'>
-                                        Flagged?
+                                        {item.flagged}
                                     </TableCell>
                                     <TableCell 
                                         align='center'>
                                         <Button 
                                             color='secondary' 
-                                            variant='contained'>
+                                            variant='contained'
+                                            onClick={() => this.props.onDelete(item.id)}>
                                             Delete
                                         </Button>
                                     </TableCell>
